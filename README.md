@@ -13,8 +13,9 @@ There are 3 components
 
 First create a conda enviornment and install the required packages.
 ```
-conda create --name myenv
-conda create -n myenv --file package-list.txt
+conda create --name ndcrawlenv
+conda activate ndcrawlenv
+conda install --file package-list.txt --channel conda-forge
 ```
 
 Within the root folder the crawler can be run with the following starting char paramter of X.
@@ -22,6 +23,8 @@ Within the root folder the crawler can be run with the following starting char p
 ```
 scrapy crawl names -O names.jsonl -a starting_char=X
 ```
+
+The crawler outputs jsonlines each containing entities and the name of the parent company for debugging purposes.
 
 The plotter can be run using the followng command.
 
@@ -32,6 +35,4 @@ python plot_connected_components.py
 The problem_exploration.ipynb is a walkthrough of the thought process used to solve the problem.
 A few interesting topics came up.
 
-
-
-
+The data requested in located in names.jsonl and the plot is located in names.png.
