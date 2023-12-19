@@ -11,6 +11,12 @@ There are 3 components
 
 # Running
 
+First create a conda enviornment and install the required packages.
+```
+conda create --name myenv
+conda create -n myenv --file package-list.txt
+```
+
 Within the root folder the crawler can be run with the following starting char paramter of X.
 
 ```
